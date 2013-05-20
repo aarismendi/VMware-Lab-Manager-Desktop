@@ -26,7 +26,9 @@ namespace VMware_Lab_Manager_Desktop
 
         private void webBrowser1_LoadCompleted(object sender, NavigationEventArgs e)
         {
-
+            TabItem tab = (TabItem)this.tabControl1.SelectedItem;
+            dynamic doc = webBrowser1.Document;
+            tab.Header = doc.Title;
         }
     }
 }
